@@ -1,5 +1,5 @@
-import * as THREE from "three";
-import { type OrthographicCamera, type Scene, type WebGLRenderer } from "three";
+import * as THREE from 'three';
+import { type OrthographicCamera, type Scene, type WebGLRenderer } from 'three';
 
 class SimonDevGLSLCourse {
   private threejs: WebGLRenderer | undefined;
@@ -12,11 +12,11 @@ class SimonDevGLSLCourse {
     document.body.appendChild(this.threejs.domElement);
 
     window.addEventListener(
-      "resize",
+      'resize',
       () => {
         this.onWindowResize();
       },
-      false,
+      false
     );
 
     this.scene = new THREE.Scene();
@@ -34,13 +34,13 @@ class SimonDevGLSLCourse {
     if (!this.scene) {
       return;
     }
-    const vsh = await fetch("./shaders/vertex-shader.glsl");
-    const fsh = await fetch("./shaders/fragment-shader.glsl");
+    const vsh = await fetch('./shaders/vertex-shader.glsl');
+    const fsh = await fetch('./shaders/fragment-shader.glsl');
 
     const material = new THREE.ShaderMaterial({
       uniforms: {},
       vertexShader: await vsh.text(),
-      fragmentShader: await fsh.text(),
+      fragmentShader: await fsh.text()
     });
 
     const geometry = new THREE.PlaneGeometry(1, 1);
@@ -72,7 +72,7 @@ class SimonDevGLSLCourse {
 
 let App = null;
 
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener('DOMContentLoaded', async () => {
   App = new SimonDevGLSLCourse();
   await App.initialize();
 });

@@ -1,9 +1,20 @@
 import { defineConfig } from 'vite';
-import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [],
+  plugins: [
+    // {
+    //   name: "glsl-as-text",
+    //   configureServer(server) {
+    //     server.middlewares.use((req, res, next) => {
+    //       if (req.url?.endsWith(".glsl")) {
+    //         res.setHeader("Content-Type", "text/plain");
+    //       }
+    //       next();
+    //     });
+    //   },
+    // },
+  ],
   root: './',
   // base: process.env.NODE_ENV === 'production' ? '/threejs-inspector/' : './',
   base: './',
