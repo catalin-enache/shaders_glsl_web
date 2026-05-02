@@ -1,0 +1,26 @@
+{
+  "name": "shaders_glsl_web",
+  "homepage": "https://github.com/catalin-enache/shaders_glsl_web",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.ts",
+    "build-demo": "vite build --config vite.config.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
+    "vitest-headless": "vitest run --browser.headless --config vite.config.ts",
+    "vitest-watch": "vitest --config vite.config.ts",
+    "preview-build": "vite preview --config vite.config.ts"
+  },
+  "dependencies": {
+    "three": "0.175"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/three": "^0.175.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
